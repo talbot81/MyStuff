@@ -1,3 +1,4 @@
 NARY_MAX({{variable}}, 0)
 SUM(NARY_MAX({{variable}}, 0))+
-SUM(NARY_MAX({{variable}}, 0))+SUM(NARY_MAX({{variable}}, 0))
+SUM(NARY_MAX({{variable}}, 0))+SUM(NARY_MAX({{variable}}, 0))+SUM(NARY_MAX({{variable}}, 0))
+(SUM(NARY_MAX({{variable}}, 0))+SUM(NARY_MAX({{variable}}, 0)))/SUM(NARY_MAX({{variable}}, 0))

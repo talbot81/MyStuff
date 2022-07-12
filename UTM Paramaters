@@ -2,4 +2,11 @@ Test Parameters:
 utm_source=test&utm_medium=test&utm_campaign=test&utm_content=test&utm_term=test
 
 Outreach Email Sequences:
-utm_source=outreach&utm_medium=email&utm_campaign=cryoskin&utm_content=webinar_compete_beauty_field&utm_term=1_4
+Template: 
+?assist=[source]-[name of sequence]-[email step and variant] 
+
+Examples: 
+?assist=outreach-ebook_any-1a
+?assist=outreach-ebook_any-1b
+?assist=outreach-webinar_how_to_compete-1a
+?assist=outreach-webinar_how_to_compete-1b

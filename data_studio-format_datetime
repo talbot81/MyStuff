@@ -1,0 +1,3 @@
+FORMAT_DATETIME("%y-%m", #)
+FORMAT_DATETIME("%G-W%V", #)
+FORMAT_DATETIME("%y-%m-%d", #)

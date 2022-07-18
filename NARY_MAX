@@ -2,3 +2,10 @@ NARY_MAX({{variable}}, 0)
 SUM(NARY_MAX({{variable}}, 0))+
 SUM(NARY_MAX({{variable}}, 0))+SUM(NARY_MAX({{variable}}, 0))+SUM(NARY_MAX({{variable}}, 0))
 (SUM(NARY_MAX({{variable}}, 0))+SUM(NARY_MAX({{variable}}, 0)))/SUM(NARY_MAX({{variable}}, 0))
+
+
+cost-paid_social
+SUM(NARY_MAX(cost-cryo&endo, 0))+SUM(NARY_MAX(cost-artemis, 0))+SUM(NARY_MAX(cost-linkedin, 0))
+
+cpl-paid_social
+(SUM(NARY_MAX(cost-cryo&endo, 0))+SUM(NARY_MAX(cost-artemis, 0))+SUM(NARY_MAX(cost-linkedin, 0)))/SUM(NARY_MAX(leads, 0))

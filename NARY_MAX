@@ -11,3 +11,6 @@ SUM(NARY_MAX(cost-cryo&endo, 0))+SUM(NARY_MAX(cost-artemis, 0))+SUM(NARY_MAX(cos
 total
 (SUM(NARY_MAX(cost-cryo&endo, 0))+SUM(NARY_MAX(cost-artemis, 0))+SUM(NARY_MAX(cost-linkedin, 0))+SUM(NARY_MAX(cost_ppc (gad), 0)))/SUM(NARY_MAX(leads (sf), 0))
 
+paid_search
+SUM(NARY_MAX(cost_ppc (gad), 0))/SUM(NARY_MAX(leads (sf), 0))
+

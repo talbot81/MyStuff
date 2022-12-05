@@ -1,0 +1,12 @@
+(function() {
+  var scriptElement = document.createElement('script'); //create script element
+  scriptElement.async = true; //set to asynchronous
+  scriptElement.src = 'https://www.example.com/script-url'; //point to external JS 
+  document.body.appendChild(scriptElement); //add to end of body tag
+})();
+
+(function() {
+  var scriptElement = document.createElement('script'); //create script elemenmt
+  scriptElement.innerHTML = 'window.globalVar = "Element Injection!"; console.log(window.globalVar);'; insert script directly to HTML
+  document.body.appendChild(scriptElement);
+})();

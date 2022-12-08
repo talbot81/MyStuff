@@ -1,0 +1,10 @@
+document.addEventListener('click', function(event) {
+  window.dataLayer.push({
+    event: 'gtm.click',
+    'gtm.element': event.target,
+    'gtm.elementId': event.target.getAttribute('id') || '',
+    'gtm.elementClasses': event.target.getAttribute('class') || '',
+    'gtm.elementTarget': event.target.getAttribute('target') || '',
+    'gtm.elementUrl': event.target.getAttribute('href')
+  });
+}, true);

@@ -8,3 +8,21 @@ document.addEventListener('click', function(event) {
     'gtm.elementUrl': event.target.getAttribute('href')
   });
 }, true);
+
+
+//Mimic the Just Links trigger (i.e. climbs up to the nearest wrapping <a> element and uses that to populate the Data Layer. If there is no wrapping <a> element, the callback should not do the dataLayer.push)
+
+document.addEventListener('click', function(event) {
+  var element = event.target;
+  element = element.closest('a');
+  if (!!element) {
+    window.dataLayer.push({
+      event: 'gtm.linkClick',
+      'gtm.element': element,
+      'gtm.elementId': element.getAttribute('id') || '',
+      'gtm.elementClasses': element.getAttribute('class') || '',
+      'gtm.elementTarget': element.getAttribute('target') || '',
+      'gtm.elementUrl': element.getAttribute('href') || ''
+    });
+  }
+});

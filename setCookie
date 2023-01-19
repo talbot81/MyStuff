@@ -1,3 +1,5 @@
+
+/*in cjv - set single cookie code to be called by chtml */
 function() {
 	var setCookie = function (cookieName, cookieValue, expirationInMinutes, domain) {
 		var expirationTime = expirationInMinutes * 60 * 1000;
@@ -11,3 +13,11 @@ function() {
 	};
 	return setCookie
 }
+
+
+/*in chtml tag - call setCookie to generate all cookies from one tag*/
+/*{{cjv that declares setCookie}}("name of cookie", "{{value to store in cookie}}", duration in minutes, ".domain to set cookie")*/
+<script>
+    {{cjs-set_cookie}}("__gtm_medium", "{{cjs-get_name-demo}}", 1440, ".mydigitaladvice.com");
+    {{cjs-set_cookie}}("__gtm_source", "{{cjs-get_name-demo}}", 1440, ".mydigitaladvice.com");
+</script>

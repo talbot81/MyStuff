@@ -1,0 +1,13 @@
+function() {
+	var setCookie = function (cookieName, cookieValue, expirationInMinutes, domain) {
+		var expirationTime = expirationInMinutes * 60 * 1000;
+		var date = new Date();
+		var dateTimeNow = date.getTime();
+
+		date.setTime(dateTimeNow + expirationTime);
+		var expirationTime = date.toUTCString();
+		document.cookie = cookieName+"="+cookieValue+"; expires="+expirationTime+"; path=/; domain="+domain;
+      
+	};
+	return setCookie
+}

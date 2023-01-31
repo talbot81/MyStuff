@@ -1,0 +1,13 @@
+.fluent_form_FF_ID input[name="zip_code"] {
+	-webkit-appearance: textfield;
+	-moz-appearance: textfield;
+	appearance: textfield;
+}
+
+/* This is to disable the Chrome number step button */
+.fluent_form_FF_ID input[name="zip_code"]::-webkit-outer-spin-button,
+.fluent_form_FF_ID input[name="zip_code"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+https://itchycode.com/how-to-validate-and-ensure-fluent-form-address-zip-code-field-as-numeric-value/

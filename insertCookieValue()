@@ -1,0 +1,23 @@
+//cookieNames  = add name of GTM 1st party cookie variable
+//fieldNames = add form element name to insert value
+
+<script>
+  function insertCookieValue(cookieName, elementName) {
+    var cookieValue = cookieName;
+    if (cookieValue) {
+      var inputEls = document.getElementsByName(elementName);
+      for (var i = 0; i < inputEls.length; i++) {
+        inputEls[i].value = cookieValue;
+      }
+    }
+  }
+
+  // Define the cookie names and form field names
+  var cookieNames = ['{{cookie-utm_source}}', '{{cookie-utm_medium}}', '{{cookie-utm_campaign}}', '{{cookie-utm_term}}', '{{cookie-utm_content}}'];
+  var fieldNames = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+
+  // Insert the cookie values into the form fields
+  for (var i = 0; i < cookieNames.length; i++) {
+    insertCookieValue(cookieNames[i], fieldNames[i]);
+  }
+</script>

@@ -1,0 +1,31 @@
+<script>
+  function readCookiesAndInsertValues() {
+  var cookiesToRead = ['__gtm_utm_campaign', '__gtm_utm_medium', '__gtm_utm_term', '__gtm_utm_source', '__gtm_utm_content', '__gtm_gclid'];
+  var formFields = ['utm_campaign', 'utm_medium', 'utm_term', 'utm_source', 'utm_content', 'gclid'];
+  for (var i = 0; i < cookiesToRead.length; i++) {
+    var cookieValue = getCookie(cookiesToRead[i]);
+    if (cookieValue === '') {
+      cookieValue = 'undefined';
+    }
+    document.getElementsByName(formFields[i])[0].value = String(cookieValue);
+  }
+}
+
+function getCookie(cookieName) {
+  var cookieValue = '';
+  if (document.cookie && document.cookie !== '') {
+    var cookies = document.cookie.split(';');
+    for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i].trim();
+      if (cookie.substring(0, cookieName.length + 1) === (cookieName + '=')) {
+        cookieValue = decodeURIComponent(cookie.substring(cookieName.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
+}
+
+ readCookiesAndInsertValues();
+
+</script>
